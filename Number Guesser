@@ -1,0 +1,43 @@
+let humanScore = 0;
+let computerScore = 0;
+let currentRoundNumber = 1;
+
+// Write your code below:
+//Function to generate random number for secret number which one has to guess
+const generateTarget=()=>
+{
+  let randomInt = Math.floor(Math.random()*10);
+  return randomInt;
+}
+//checking working of function
+
+const comapreGuesses = (humanGuess,computerGuess,targetGuess) =>
+{
+// to calculate absolute value
+const humanDifference =Maths.abs(targetGuess - humanGuess);
+const computerDiffernce = Maths.abs(targetGuess - computerGuess);
+return humanDifference <= computerDifference;
+}
+
+      
+const updateScore= winner =>
+{ 
+  if(winner === 'human'){
+    humanScore++;
+  }else if(winner ==='computer') {
+    computerScore++; 
+  }
+ }
+ const advanceRound =() =>
+ {
+  return currentRoundNumber ++;
+ }
+//updateScore('human');
+console.log(humanScore);
+console.log(generateTarget());
+console.log(advanceRound());
+ 
+
+//updateScore('computer');
+//console.log(computerScore);
+ 
